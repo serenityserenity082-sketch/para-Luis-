@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Luis ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #180006, #4b0718, #100003);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.corazones {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.corazon {
+    position: absolute;
+    bottom: -50px;
+    font-size: 25px;
+    animation: subir 7s linear infinite;
+    opacity: 0.8;
+}
+
+.corazon:nth-child(1) { left: 10%; animation-delay: 0s; }
+.corazon:nth-child(2) { left: 30%; animation-delay: 2s; }
+.corazon:nth-child(3) { left: 55%; animation-delay: 4s; }
+.corazon:nth-child(4) { left: 80%; animation-delay: 1s; }
+.corazon:nth-child(5) { left: 90%; animation-delay: 3s; }
+
+@keyframes subir {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 35px 25px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 25px;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 35px rgba(255, 0, 70, 0.25);
+}
+
+.corazon-grande {
+    font-size: 65px;
+    animation: latido 1.5s infinite;
+}
+
+@keyframes latido {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+h1 {
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+.subtitulo {
+    color: #ffb7c8;
+    font-size: 18px;
+}
+
+.carta {
+    display: none;
+    margin-top: 25px;
+    line-height: 1.8;
+    font-size: 17px;
+    animation: aparecer 1s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button {
+    margin-top: 25px;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 30px;
+    background: #a80d35;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255,0,70,0.3);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.firma {
+    margin-top: 25px;
+    color: #ff9fb7;
+    font-style: italic;
+}
+</style>
+</head>
+
+<body
